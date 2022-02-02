@@ -4,6 +4,7 @@ import { DemoDataProviderService } from '../demo-data-provider.service';
 import { Subscription } from 'rxjs/Subscription';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import 'anychart';
+import { log } from 'console';
 
 @Component({
   selector: 'app-chart',
@@ -33,11 +34,32 @@ export class ChartComponent implements OnInit {
     anychart.graphics.useAbsoluteReferences(false);
     // Default data set mapping, hardcoded here.
     this.chart = anychart.pie(this.dataService_.getData('data1'));
-    this.chart.title('Gráfica principal');
+    this.chart.title('Ventas del empresa');
     const self = this;
     this.chart.listen('pointsSelect', function (e) {
       self.indexSeleccionado = e['currentPoint'].index;
       self.router.navigate(['/details', self.indexSeleccionado]);
+    });
+
+    // ascending order
+    this.chart.sort('asc');
+    // configure max labels
+    let rowsCount = this.chart.data().getRowsCount();
+    var row = this.chart.data().row(rowsCount - 1);
+    console.log(row);
+    this.chart.label().enabled(true);
+    this.chart.label().padding(10, 10);
+    this.chart.label().width('25%');
+    //this.chart.label().height('25%');
+    this.chart.label().hAlign('center');
+    this.chart.label().text(row['info1']);
+    this.chart.label().hAlign('center');
+    this.chart.label().background({
+      enabled: true,
+      fill: 'White',
+      stroke: '2 gold',
+      cornerType: 'round-inner',
+      corners: 5,
     });
     // setting the limits of the chart
     this.chart.bounds('0', '0', '50%', '100%');
