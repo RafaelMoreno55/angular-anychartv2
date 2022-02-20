@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-2">
   <div class="row">
     <div class="col-md-4 border">
       <div class="row">
@@ -23,41 +23,124 @@
               justify-content-around
             "
           >
-            <p>Imagen</p>
+            <div
+              class="rounded-circle bg-secondary"
+              style="width: 90px; height: 90px"
+            ></div>
             <a href="">Más Información</a>
           </div>
         </div>
       </div>
     </div>
     <div class="col-md-4 border">
-      
+      <ul class="mt-2">
+        <li class="d-flex justify-content-center">
+          <div
+            class="
+              h-100
+              py-2
+              px-1
+              d-flex
+              flex-row
+              align-items-center
+              border-top border-bottom border-danger border-4
+            "
+            style="width: 60%"
+          >
+            <div
+              class="rounded-circle bg-danger"
+              style="width: 32px; height: 32px"
+            ></div>
+            <span class="mx-2">No recomendado</span>
+          </div>
+        </li>
+        <li class="d-flex justify-content-center">
+          <div
+            class="h-100 py-2 px-1 d-flex flex-row align-items-center"
+            style="width: 60%"
+          >
+            <div
+              class="rounded-circle bg-success"
+              style="width: 32px; height: 32px"
+            ></div>
+            <span class="mx-2">Recomendado</span>
+          </div>
+        </li>
+        <li class="d-flex justify-content-center">
+          <div
+            class="h-100 py-2 px-1 d-flex flex-row align-items-center"
+            style="width: 60%"
+          >
+            <div
+              class="rounded-circle bg-warning"
+              style="width: 32px; height: 32px"
+            ></div>
+            <span class="mx-2">Revisar</span>
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="col-md-4 border">
-      <table class="table table-bordered align-middle text-center mt-2">
-        <tbody>
-          <tr>
-            <td>SCORE MIN RECOMENDADO</td>
-            <td>KO</td>
-            <td>SCORE OBTENIDO</td>
-          </tr>
-          <tr>
-            <td>75</td>
-            <td>NA</td>
-            <td>
-              <span class="fs-3">76.5%</span>
-              <span>Revisar</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle text-center mt-2">
+          <tbody>
+            <tr>
+              <td>SCORE MIN RECOMENDADO</td>
+              <td>KO</td>
+              <td>SCORE OBTENIDO</td>
+            </tr>
+            <tr>
+              <td>75</td>
+              <td>NA</td>
+              <td>
+                <span class="fs-3">76.5%</span>
+                <span>Revisar</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2 border">Información detallada</div>
+    <div class="col-md-2 border">
+      <div class="table-responsive">
+        <table class="table align-middle mt-2">
+          <tbody>
+            <tr>
+              <td colspan="2" class="fs-5">Información detallada</td>
+            </tr>
+            <tr>
+              <td>Móvil</td>
+              <td class="text-end">+20 0593 4095</td>
+            </tr>
+            <tr>
+              <td>Cumpleaños</td>
+              <td class="text-end">30.09.67</td>
+            </tr>
+            <tr>
+              <td>Ocupación</td>
+              <td class="text-end">Asistente</td>
+            </tr>
+            <tr>
+              <td>Twitter</td>
+              <td class="text-end">@mrperkins</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <div class="col-md-8 border"><div #chartContainer></div></div>
     <div class="col-md-2 border"></div>
   </div>
   <div class="row">
-    <div class="col-md-12 border">Descripción general</div>
+    <div class="col-md-12 border">
+      <p class="px-5">
+        Descripción: "El candidato presenta elementos de riesgo personal en los
+        factores "X, Y, Z”, el prospecto tiene un nivel no satisfactorio en
+        las competencias evaluadas, por lo anterior el prospecto NO es
+        recomendado"
+      </p>
+    </div>
   </div>
 </div>
