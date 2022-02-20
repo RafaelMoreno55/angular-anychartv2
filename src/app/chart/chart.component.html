@@ -6,8 +6,8 @@
           <p class="text-capitalize fs-3">
             gerald <span class="fw-bold">morris</span>
           </p>
-          <p class="my-0">gerald@morris.com</p>
-          <p class="my-0">UX Developer</p>
+          <span>gerald@morris.com</span>
+          <span>UX Developer</span>
           <a href="" class="text-decoration-none">email@contact.com</a>
           <a href="" class="text-decoration-none">www.example.com</a>
           <a href="" class="text-decoration-none">+1234567890</a>
@@ -20,8 +20,7 @@
               d-flex
               flex-column
               align-items-center
-              justify-content-center
-
+              justify-content-around
             "
           >
             <p>Imagen</p>
@@ -30,13 +29,33 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 border">Resultados</div>
-    <div class="col-md-4 border">Tabla de score</div>
+    <div class="col-md-4 border">
+      
+    </div>
+    <div class="col-md-4 border">
+      <table class="table table-bordered align-middle text-center mt-2">
+        <tbody>
+          <tr>
+            <td>SCORE MIN RECOMENDADO</td>
+            <td>KO</td>
+            <td>SCORE OBTENIDO</td>
+          </tr>
+          <tr>
+            <td>75</td>
+            <td>NA</td>
+            <td>
+              <span class="fs-3">76.5%</span>
+              <span>Revisar</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-2 border">Información detallada</div>
     <div class="col-md-8 border"><div #chartContainer></div></div>
-    <div class="col-md-2 border">Espacio en blanco</div>
+    <div class="col-md-2 border"></div>
   </div>
   <div class="row">
     <div class="col-md-12 border">Descripción general</div>
