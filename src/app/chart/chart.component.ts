@@ -13,8 +13,9 @@ import 'anychart';
 export class ChartComponent implements OnInit {
   //subscription: Subscription;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private router: Router) {
     /*     private dataService_: DemoDataProviderService,
+           private route: ActivatedRoute,
      */
     /* this.subscription = this.dataService_.dataSetChanged$.subscribe((dataSet) =>
       this.chart.data(this.dataService_.getData(dataSet))
@@ -40,25 +41,41 @@ export class ChartComponent implements OnInit {
     this.gauge1 = anychart.gauges.tank();
     this.gauge1.data(data);
     this.gauge1.addPointer(0);
-
+    const self = this;
+    this.gauge1.listen('pointClick', function (e) {
+      self.selectedIndex = 1;
+      self.router.navigate(['/sectorcharts', self.selectedIndex]);
+    });
     this.gauge1.bounds(0, 0, '25%', '100%');
     this.gauge1.container(stage);
     this.gauge1.draw();
     this.gauge2 = anychart.gauges.tank();
     this.gauge2.data(data);
     this.gauge2.addPointer(1);
+    this.gauge2.listen('pointClick', function (e) {
+      self.selectedIndex = 2;
+      self.router.navigate(['/sectorcharts', self.selectedIndex]);
+    });
     this.gauge2.bounds('25%', 0, '25%', '100%');
     this.gauge2.container(stage);
     this.gauge2.draw();
     this.gauge3 = anychart.gauges.tank();
     this.gauge3.data(data);
     this.gauge3.addPointer(2);
+    this.gauge3.listen('pointClick', function (e) {
+      self.selectedIndex = 3;
+      self.router.navigate(['/sectorcharts', self.selectedIndex]);
+    });
     this.gauge3.bounds('50%', 0, '25%', '100%');
     this.gauge3.container(stage);
     this.gauge3.draw();
     this.gauge4 = anychart.gauges.tank();
     this.gauge4.data(data);
     this.gauge4.addPointer(3);
+    this.gauge4.listen('pointClick', function (e) {
+      self.selectedIndex = ;
+      self.router.navigate(['/sectorcharts', self.selectedIndex]);
+    });
     this.gauge4.bounds('75%', 0, '25%', '100%');
     this.gauge4.container(stage);
     this.gauge4.draw();
