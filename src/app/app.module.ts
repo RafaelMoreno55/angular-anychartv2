@@ -8,6 +8,7 @@ import { DemoDataProviderService } from './demo-data-provider.service';
 import { ChartComponent } from './chart/chart.component';
 import { ChartDetailsComponent } from './chart-details/chart-details.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SectorChartComponent } from './sector-chart/sector-chart.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     DataPickerComponent,
     ChartComponent,
     ChartDetailsComponent,
+    SectorChartComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [DemoDataProviderService],
