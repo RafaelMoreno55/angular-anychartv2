@@ -1,0 +1,82 @@
+<div class="container mt-2">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid justify-content-start">
+      <button
+        type="button"
+        routerLink="/sectorreport"
+        class="btn btn-link me-2"
+      >
+        Ir a principal
+      </button>
+      <button type="button" (click)="goToBack()" class="btn btn-link">
+        Regresar
+      </button>
+    </div>
+  </nav>
+</div>
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-8 border">
+      <p class="text-uppercase">Resultados por variable</p>
+      <p class="fw-bold fs-3">
+        Veracidad de que la persona que contesta es el empleado
+      </p>
+    </div>
+    <div class="col-4 border">
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle text-center mt-2">
+          <tbody>
+            <tr>
+              <td class="text-uppercase">score mínimo recomendado</td>
+              <td class="text-uppercase">score obtenido</td>
+            </tr>
+            <tr>
+              <td>75</td>
+              <td>
+                <span class="fs-3">72.56%</span>
+                <span>Revisar</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1 border"></div>
+    <div class="col-10 border">
+      <div style="width: 100%; height: 100%;" #chartContainer></div>
+    </div>
+    <div class="col-1 border"></div>
+  </div>
+  <div class="row">
+    <div class="col-8 border">
+      <p class="px-3">
+        % de veracidad que quien contesta es el empleado: 72.56
+      </p>
+      <p class="px-3 text-uppercase">respuestas:</p>
+      <p class="px-3 text-uppercase">
+        sugerencias de preguntas para entrevistas:
+      </p>
+      <ol>
+        <li>
+          Durante la entrevista, ¿estuviste en un lugar tranquilo y en silencio?
+        </li>
+        <li>Durante la entrevista ¿Hubo otra persona en el lugar contigo?</li>
+        <li>
+          ¿Fuiste interrumpido en algún momento por alguna persona diferente a
+          ti durante la entrevista?
+        </li>
+      </ol>
+    </div>
+    <div class="col-4 border">
+      <p class="px-5">
+        Descripción: El factor evalúa la probabilidad de que la persona que
+        contestó la entrevista es la candidata para el puesto y no otra. Un
+        resultado entre 51% y 75% de veracidad en este factor, nos indica que
+        existe una probabilidad de que la persona haya estado acompañada o haya
+        cambiado con otra??
+      </p>
+    </div>
+  </div>
+</div>

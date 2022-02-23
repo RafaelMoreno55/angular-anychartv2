@@ -9,11 +9,17 @@ import { ChartComponent } from './chart/chart.component';
 import { ChartDetailsComponent } from './chart-details/chart-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SectorChartComponent } from './sector-chart/sector-chart.component';
+import { SectorReportComponent } from './sector-report/sector-report.component';
+import { SubsectorReportComponent } from './subsector-report/subsector-report.component';
+import { VariableReportComponent } from './variable-report/variable-report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataPickerComponent,
+    SectorReportComponent,
+    SubsectorReportComponent,
+    VariableReportComponent,
     ChartComponent,
     ChartDetailsComponent,
     SectorChartComponent,

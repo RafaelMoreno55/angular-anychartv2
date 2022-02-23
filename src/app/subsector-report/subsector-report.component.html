@@ -1,0 +1,93 @@
+<div class="container mt-2">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid justify-content-start">
+      <button
+        type="button"
+        routerLink="/sectorreport"
+        class="btn btn-link me-2"
+      >
+        Ir a principal
+      </button>
+      <button type="button" (click)="goToBack()" class="btn btn-link">
+        Regresar
+      </button>
+    </div>
+  </nav>
+</div>
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-12 border">
+      <p class="text-uppercase text-center fw-bold fs-3">
+        factores por nivel de fraude
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1 border"></div>
+    <div class="col-10 border">
+      <div class="row row-cols-1 row-cols-md-3 g-4 py-1">
+        <div class="col">
+          <div
+            class="card text-white bg-danger mb-3 h-100"
+            style="max-width: 18rem;"
+            routerLink="/variablereport/1"
+          >
+            <div class="card-header text-center fs-4">Score: 0 - 50</div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <ul>
+                  <li>Información cuantitativa</li>
+                </ul>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card text-dark bg-warning mb-3 h-100"
+            style="max-width: 18rem;"
+            routerLink="/variablereport/2"
+          >
+            <div class="card-header text-center fs-4">Score: 51 - 75</div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <ul>
+                  <li>Información socioeconómica</li>
+                </ul>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card text-white bg-success mb-3 h-100"
+            style="max-width: 18rem;"
+            routerLink="/variablereport/3"
+          >
+            <div class="card-header text-center fs-4">Score: 76 - 100</div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <ul>
+                  <li>La persona que contesta es el empleado</li>
+                </ul>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-1 border"></div>
+  </div>
+  <div class="row">
+    <div class="col-12 border">
+      <p class="px-5">
+        Descripción: Los resultados indican que existe una alta probabilidad de
+        que la persona que realizó la entrevista es quien dice ser, sin embargo,
+        se presenta un alta probabilidad de que la información cuantitativa
+        proporcionada sea falsa. Se recomienda revisar lo relativo a la
+        información socioeconómica debido a que existen variables en las que la
+        persona proporcionó información distorsionada.
+      </p>
+    </div>
+  </div>
+</div>

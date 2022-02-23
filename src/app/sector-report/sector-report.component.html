@@ -1,0 +1,154 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-4 border">
+      <div class="row">
+        <div class="col-6 border">
+          <p class="text-capitalize fs-3">
+            gerald <span class="fw-bold">morris</span>
+          </p>
+          <span>gerald@morris.com</span>
+          <span>UX Developer</span>
+          <a href="" class="text-decoration-none">email@contact.com</a>
+          <a href="" class="text-decoration-none">www.example.com</a>
+          <a href="" class="text-decoration-none">+1234567890</a>
+        </div>
+        <div class="col-6 border">
+          <div
+            class="
+              w-100
+              h-100
+              d-flex
+              flex-column
+              align-items-center
+              justify-content-around
+            "
+          >
+            <div
+              class="rounded-circle bg-secondary"
+              style="width: 90px; height: 90px"
+            ></div>
+            <button
+              type="button"
+              (click)="ShowInfo()"
+              class="btn btn-outline-info"
+            >
+              Más Información
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 border">
+      <ul class="mt-2">
+        <li class="d-flex justify-content-center">
+          <div
+            class="
+              h-100
+              py-2
+              px-1
+              d-flex
+              flex-row
+              align-items-center
+              border-top border-bottom border-danger border-4
+            "
+            style="width: 60%"
+          >
+            <div
+              class="rounded-circle bg-danger"
+              style="width: 32px; height: 32px"
+            ></div>
+            <span class="mx-2">No recomendado</span>
+          </div>
+        </li>
+        <li class="d-flex justify-content-center">
+          <div
+            class="h-100 py-2 px-1 d-flex flex-row align-items-center"
+            style="width: 60%"
+          >
+            <div
+              class="rounded-circle bg-success"
+              style="width: 32px; height: 32px"
+            ></div>
+            <span class="mx-2">Recomendado</span>
+          </div>
+        </li>
+        <li class="d-flex justify-content-center">
+          <div
+            class="h-100 py-2 px-1 d-flex flex-row align-items-center"
+            style="width: 60%"
+          >
+            <div
+              class="rounded-circle bg-warning"
+              style="width: 32px; height: 32px"
+            ></div>
+            <span class="mx-2">Revisar</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-4 border">
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle text-center mt-2">
+          <tbody>
+            <tr>
+              <td class="text-uppercase">score mínimo recomendado</td>
+              <td class="text-uppercase">ko</td>
+              <td class="text-uppercase">score obtenido</td>
+            </tr>
+            <tr>
+              <td>75</td>
+              <td class="text-uppercase">na</td>
+              <td>
+                <span class="fs-3">76.5%</span>
+                <span>Revisar</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 border">
+      <div *ngIf="isShowInfo" class="table-responsive">
+        <table class="table align-middle mt-2">
+          <tbody>
+            <tr>
+              <td colspan="2" class="fs-5">Información detallada</td>
+            </tr>
+            <tr>
+              <td>Móvil</td>
+              <td class="text-end">+20 0593 4095</td>
+            </tr>
+            <tr>
+              <td>Cumpleaños</td>
+              <td class="text-end">30.09.67</td>
+            </tr>
+            <tr>
+              <td>Ocupación</td>
+              <td class="text-end">Asistente</td>
+            </tr>
+            <tr>
+              <td>Twitter</td>
+              <td class="text-end">@mrperkins</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-8 border">
+      <div style="width: 100%; height: 100%;" #chartContainer></div>
+    </div>
+    <div class="col-2 border"></div>
+  </div>
+  <div class="row">
+    <div class="col-12 border">
+      <p class="px-5">
+        Descripción: "El candidato presenta elementos de riesgo personal en los
+        factores "X, Y, Z”, el prospecto tiene un nivel no satisfactorio en
+        las competencias evaluadas, por lo anterior el prospecto NO es
+        recomendado"
+      </p>
+    </div>
+  </div>
+</div>
